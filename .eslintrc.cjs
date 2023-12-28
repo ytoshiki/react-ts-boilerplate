@@ -15,7 +15,8 @@ module.exports = {
     '.eslintrc.cjs',
     'node_modules',
     'coverage',
-    '__mocks__'
+    '__mocks__',
+    'setupTests.js'
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
