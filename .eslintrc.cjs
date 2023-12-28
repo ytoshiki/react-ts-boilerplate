@@ -7,9 +7,16 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'prettier'
+    'prettier',
+    'plugin:testing-library/react'
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', 'coverage'],
+  ignorePatterns: [
+    'dist',
+    '.eslintrc.cjs',
+    'node_modules',
+    'coverage',
+    '__mocks__'
+  ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
@@ -23,5 +30,10 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 }
