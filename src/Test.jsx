@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Test = () => {
-  const hi = 'hi'
+  const hi = 'hii'
   return <div>Test</div>
 }
 
