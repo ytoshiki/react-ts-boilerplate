@@ -15,7 +15,8 @@ module.exports = {
     '.eslintrc.cjs',
     'node_modules',
     'coverage',
-    '__mocks__',
+    'src/__mocks__/styleMock.js',
+    'src/__mocks__/fileMock.js',
     'setupTests.js'
   ],
   parser: '@typescript-eslint/parser',
@@ -24,6 +25,12 @@ module.exports = {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true }
+    ],
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['@/features/*/*']
+      }
     ]
   },
   parserOptions: {
