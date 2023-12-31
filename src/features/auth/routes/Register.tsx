@@ -1,8 +1,8 @@
 import Layout from '../components/Layout'
-import { LoginForm } from '../components/LoginForm'
+import { RegisterForm } from '../components/RegisterForm'
 import { useNavigate } from 'react-router-dom'
 
-export const Login = () => {
+export const Register = () => {
   const navigate = useNavigate()
 
   const onSuccess = () => {
@@ -10,8 +10,8 @@ export const Login = () => {
   }
 
   return (
-    <Layout title="login">
-      <LoginForm onSuccess={onSuccess} />
+    <Layout title="register">
+      <RegisterForm onSuccess={onSuccess} />
     </Layout>
   )
 }

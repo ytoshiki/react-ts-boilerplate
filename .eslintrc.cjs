@@ -17,7 +17,8 @@ module.exports = {
     'coverage',
     'src/__mocks__/styleMock.js',
     'src/__mocks__/fileMock.js',
-    'setupTests.js'
+    'setupTests.js',
+    'vite.config.ts'
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
@@ -31,7 +32,9 @@ module.exports = {
       {
         patterns: ['@/features/*/*']
       }
-    ]
+    ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-floating-promises': 'off'
   },
   parserOptions: {
     ecmaVersion: 'latest',
