@@ -2,7 +2,7 @@ import { useRoutes } from 'react-router-dom'
 import { publicRoutes } from './public'
 import { commonRoutes } from './common'
 import { protectedRoutes } from './protected'
-import useAuth from '../hooks/useAuth'
+import useAuth from '@/hooks/useAuth'
 
 export const AppRoutes = () => {
   const { session } = useAuth()

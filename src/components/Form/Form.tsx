@@ -7,6 +7,7 @@ import {
 import clsx from 'clsx'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ZodType, ZodTypeDef } from 'zod'
+import { Form as UIForm } from '../Elements'
 
 type FormProps<TFormValues extends Record<string, any>, Schema> = {
   schema?: Schema
@@ -36,13 +37,15 @@ export const Form = <
   })
 
   return (
-    <form
-      className={clsx('form', className)}
-      // ライブラリ依存のため
-      // eslint-disable-next-line @typescript-eslint/no-misused-promises
-      onSubmit={methods.handleSubmit(onSubmit)}
-    >
-      {children(methods)}
-    </form>
+    <UIForm {...methods}>
+      <form
+        className={clsx('form', className)}
+        // ライブラリ依存のため
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
+        onSubmit={methods.handleSubmit(onSubmit)}
+      >
+        {children(methods)}
+      </form>
+    </UIForm>
   )
 }

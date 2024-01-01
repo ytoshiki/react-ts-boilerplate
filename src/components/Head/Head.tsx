@@ -7,7 +7,7 @@ type HeadProps = {
 }
 
 const defaultMeta = {
-  title: '',
+  title: APP_TITLE,
   description: ''
 }
 
@@ -17,7 +17,7 @@ export const Head = ({
   description = defaultMeta.description
 }: HeadProps) => {
   return (
-    <Helmet title={`${title} | ${APP_TITLE}`}>
+    <Helmet title={`${title ? title + ' |' : ''}${APP_TITLE}`}>
       <meta name="description" content={description} />
     </Helmet>
   )
