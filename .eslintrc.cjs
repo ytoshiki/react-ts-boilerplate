@@ -18,7 +18,9 @@ module.exports = {
     'src/__mocks__/styleMock.js',
     'src/__mocks__/fileMock.js',
     'setupTests.js',
-    'vite.config.ts'
+    'vite.config.ts',
+    'postcss.config.js',
+    'tailwind.config.js'
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
@@ -34,7 +36,9 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-floating-promises': 'off'
+    '@typescript-eslint/no-floating-promises': 'off',
+    'react-refresh/only-export-components': 'off',
+    'react/no-unescaped-entities': 'off'
   },
   parserOptions: {
     ecmaVersion: 'latest',
