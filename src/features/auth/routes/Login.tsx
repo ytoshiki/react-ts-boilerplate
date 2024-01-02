@@ -6,7 +6,7 @@ export const Login = () => {
   const navigate = useNavigate()
 
   const onSuccess = () => {
-    navigate('/app')
+    navigate('/app/profile')
   }
 
   return (

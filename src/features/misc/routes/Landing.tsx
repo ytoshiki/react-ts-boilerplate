@@ -68,10 +68,18 @@ export const Landing = () => {
                   </tr>
                   <tr className="m-0 border-t p-0 even:bg-muted">
                     <th className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                      Auth / Database
+                      State management
                     </th>
                     <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                      Supabase
+                      Global: React Context API / Server: None
+                    </td>
+                  </tr>
+                  <tr className="m-0 border-t p-0 even:bg-muted">
+                    <th className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                      BaaS(Auth / Database)
+                    </th>
+                    <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                      Supabase, Postgres
                     </td>
                   </tr>
                   <tr className="m-0 border-t p-0 even:bg-muted">
@@ -103,7 +111,8 @@ export const Landing = () => {
                       Others
                     </th>
                     <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                      husky, github-actions, eslint, prettier
+                      react router, husky, github-actions, eslint, prettier,
+                      axios, ...etc
                     </td>
                   </tr>
                 </tbody>

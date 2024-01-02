@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router } from 'react-router-dom'
 import * as React from 'react'
 import { ThemeProvider } from './theme-provider'
+import { MainLayout } from '@/components/Layout'
 
 const ErrorFallback = () => {
   return (
@@ -21,13 +22,13 @@ type AppProviderProps = {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
-    <React.Suspense
-      fallback={<div>super beautiful spinner displays while suspending</div>}
-    >
+    <React.Suspense>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
           <ThemeProvider>
-            <Router>{children}</Router>
+            <Router>
+              <MainLayout>{children}</MainLayout>
+            </Router>
           </ThemeProvider>
         </HelmetProvider>
       </ErrorBoundary>

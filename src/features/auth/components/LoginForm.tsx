@@ -21,15 +21,15 @@ type LoginValues = {
 const schema = z.object({
   email: z
     .string()
-    .min(1, '必須項目です')
-    .email('メールアドレスの形式で入力してください')
-    .regex(/^[\u0021-\u007e]+$/u, 'メールアドレスの形式で入力してください'),
+    .min(1, 'Plase enter a value.')
+    .email('Please enter a valid email address.')
+    .regex(/^[\u0021-\u007e]+$/u, 'Please enter a valid email address.'),
   password: z
     .string()
-    .min(8, 'パスワードは8文字以上で入力してください')
+    .min(8, 'Password must contain at least 8 letters.')
     .regex(
       /^(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}$/i,
-      'パスワードは半角英数字混合で入力してください'
+      'Password must contain both letters and numbers.'
     )
 })
 

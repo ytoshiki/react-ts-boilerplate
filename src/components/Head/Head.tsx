@@ -11,7 +11,6 @@ const defaultMeta = {
   description: ''
 }
 
-// TODO: write test
 export const Head = ({
   title = defaultMeta.title,
   description = defaultMeta.description

@@ -66,7 +66,7 @@ export const Navigation = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             {session?.user && (
               <Button
                 onClick={() => {

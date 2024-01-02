@@ -1,4 +1,3 @@
-import { MainLayout } from '@/components/Layout'
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import { lazyImport } from '@/utils/lazyImport'
@@ -8,11 +7,9 @@ const { Register } = lazyImport(() => import('@/features/auth'), 'Register')
 
 const App = () => {
   return (
-    <MainLayout>
-      <Suspense>
-        <Outlet />
-      </Suspense>
-    </MainLayout>
+    <Suspense>
+      <Outlet />
+    </Suspense>
   )
 }
 

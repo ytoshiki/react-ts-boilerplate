@@ -34,7 +34,7 @@ const useAuth = () => {
       let errorMessage = error.message
 
       if (errorMessage === 'User already registered') {
-        errorMessage = '既に登録済みのメールアドレスです。'
+        errorMessage = 'This email address is already used.'
       }
 
       throw new Error(errorMessage)
