@@ -8,7 +8,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'prettier',
-    'plugin:testing-library/react'
+    'plugin:testing-library/react',
+    'plugin:storybook/recommended'
   ],
   ignorePatterns: [
     'dist',
@@ -20,7 +21,8 @@ module.exports = {
     'setupTests.js',
     'vite.config.ts',
     'postcss.config.js',
-    'tailwind.config.js'
+    'tailwind.config.js',
+    'createStory.ts'
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
